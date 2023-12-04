@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./static/img/cat_img.jpg" alt="An image of a screaming cat" height="200px">
+    <!-- best way to do relative pathing start with a dot-->
+    <img src="static/img/cat_img.jpg" alt="An image of a screaming cat" height="200px">
+    <!--2nd best way to do relative pathing start with a dot-->
+    <img src="/static/img/cat_img.jpg" alt="An image of a screaming cat" height="200px"> <!--do not use this method-->
+    <!-- two dots will go up a folder ../../../ -->
+    <video src="./static/vid/cat.mp4" height="400px" loop muted autoplay></video>
+
+    <form action="/process" method="post">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Your name...">
+        </div>
+        <div>
+            <label>Email: </label>
+            <input type="text" name="email" placeholder="Your email...">
+        </div>
+        <div>
+            <input type="checkbox" name="offers" id="offers" checked>
+            <label for="offers">I would like
+                to receive email offers!</label>
+            <input type="checkbox" name="offers" id=bob" checked>
+            <label for="offers">I would like
+                to receive email offers!</label>
+            <input type="checkbox" name="offers" id="alice" checked>
+            <label for="offers">I would like
+                to receive email offers!</label>
+        </div>
+        <div>
+            <input type="radio" name="only_one" id="one">
+            <input type="radio" name="only_one" id="two">
+            <input type="radio" name="only_one" id="three">
+            <input type="radio" name="only_one" id="four">
+            <input type="radio" name="only_one" id="five">
+        </div>
+        <input type="submit" value="Sign Up!">
+        <label >test</label>
+        <br> 
+        <label >test2</label>
+    </form>
+</body>
+
+</html>
