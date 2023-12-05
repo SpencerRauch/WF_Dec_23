@@ -47,6 +47,7 @@ console.log(stringRepeat(stringToRepeat2, numberToRepeat2))
 
 /************************************************************************************************/
 
+var wordArray = ['shawn', 'jim', 'tyler', 'heidi', 'john', 'spencer', 'michael']
 
 /**
  * Finds the longest word in the given array of words.
