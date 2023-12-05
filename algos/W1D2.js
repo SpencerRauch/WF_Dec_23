@@ -15,6 +15,10 @@ var expected2 = 'sunnyside up eggsbiscuits and gravy'
  */
 function combineSmallerStringFirst(s1, s2) {
     //your code here
+    if (s1.length <= s2.length){
+        return s1 + s2
+    }
+    return s2 + s1
 }
 
 console.log(combineSmallerStringFirst(smallerStringA1, smallerStringB1))
@@ -38,6 +42,11 @@ var repeatedExpected2 = 'margherita pizzamargherita pizza'
 */
 function stringRepeat(str, num) {
     //your code here
+    var newStr = "";
+    for (var i = 0; i < num; i++){
+        newStr += str;
+    }
+    return newStr
 }
 
 console.log(stringRepeat(stringToRepeat1, numberToRepeat1))
@@ -56,6 +65,13 @@ var wordArrayTwo = ['a','bb','ccc','dd'] //ccc
  */
 function findLongestWord(arr) {
     //your code here
+    var longest = arr[0]
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i].length >= longest.length){
+            longest = arr[i]
+        }
+    }
+    return longest
 }
 
 console.log(findLongestWord(wordArray))
