@@ -23,9 +23,9 @@ console.log(combineSmallerStringFirst(smallerStringA2, smallerStringB2))
 
 /************************************************************************************************/
 
-var stringToRepeat1 = 'Birria Tacos'
+var stringToRepeat1 = 'pineapple'
 var numberToRepeat1 = 5
-var repeatedExpected = 'Birria TacosBirria TacosBirria TacosBirria TacosBirria Tacos'
+var repeatedExpected = 'pineapplepineapplepineapplepineapplepineapple'
 
 var stringToRepeat2 = 'margherita pizza'
 var numberToRepeat2 = 2
