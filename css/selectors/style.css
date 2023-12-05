@@ -1,0 +1,60 @@
+/* CASCADING STYLE SHEET */
+
+/* wildcard selector */
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* element selector, uses the tag of the element */
+h1 {
+    color: blue; /* !important; */
+    font-size: 36pt;
+}
+
+/* class level selector, use a period to denote this is a class */
+.green-text {
+    color:green;
+}
+
+/* id level selector */
+#actualHeader{
+    color: blanchedalmond;
+    background-color: #008000;
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* descendent selector */
+.parent p {
+    color: green;
+}
+
+/* direct descendent selector */
+div.parent > p {
+    font-size: 24pt;
+}
+
+ul.parent li {
+    color: pink
+}
+
+.images {
+    height:100px;
+}
+
+img {
+    height: 50%;
+    /* width: 200px; */
+}
+/* img[height="200px"]{
+    display: inline-block;
+} */
