@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.box {
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    /* margin: 10px; apply 10 px of margin ALL AROUND */
+    /*margin: 2px 50px; /* top/bottom left/right */
+    margin: 5px 10px 15px 20px; /* top right bottom left */
+    background-color: blue;
+    border-style: solid;
+    border-color: red;
+    border-width: 10px;
+    border-radius: 10px;
+    /* display: inline-block; */
+}
+
+.sub {
+    /* margin: 10px; */
+    border: 0px;
+    border-radius: 45%;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: aqua;
+}
+
+.ilb {
+    display: inline-block
+}
+
+.block {
+    display: block;
+}
+
+.il {
+    display: inline;
+}
+
+li {
+    vertical-align:top;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    padding: 10px;
+    background-color: blanchedalmond;
+}
+
+.smol{
+    height: 80px;
+}
