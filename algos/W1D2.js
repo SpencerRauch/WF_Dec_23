@@ -1,10 +1,10 @@
 var smallerStringA1 = 'abcd'
 var smallerStringB1 = 'efg'
-var expected = 'efgabcd'
+var expected1 = 'efgabcd'
 
 var smallerStringA2 = 'sunnyside up eggs'
 var smallerStringB2 = 'biscuits and gravy'
-var expected = 'sunnyside up eggsbiscuits and gravy'
+var expected2 = 'sunnyside up eggsbiscuits and gravy'
 
 /**
  * Combine two given strings together with the smaller string being added
@@ -17,7 +17,6 @@ function combineSmallerStringFirst(s1, s2) {
     //your code here
 }
 
-
 console.log(combineSmallerStringFirst(smallerStringA1, smallerStringB1))
 console.log(combineSmallerStringFirst(smallerStringA2, smallerStringB2))
 
@@ -25,11 +24,11 @@ console.log(combineSmallerStringFirst(smallerStringA2, smallerStringB2))
 
 var stringToRepeat1 = 'pineapple'
 var numberToRepeat1 = 5
-var repeatedExpected = 'pineapplepineapplepineapplepineapplepineapple'
+var repeatedExpected1 = 'pineapplepineapplepineapplepineapplepineapple'
 
 var stringToRepeat2 = 'margherita pizza'
 var numberToRepeat2 = 2
-var repeatedExpected = 'margherita pizzamargherita pizza'
+var repeatedExpected2 = 'margherita pizzamargherita pizza'
 
 /**
  * Given a string and an integer representing how many times the string should
@@ -47,7 +46,8 @@ console.log(stringRepeat(stringToRepeat2, numberToRepeat2))
 
 /************************************************************************************************/
 
-var wordArray = ['shawn', 'jim', 'tyler', 'heidi', 'john', 'spencer', 'michael']
+var wordArray = ['shawn', 'jim', 'tyler', 'heidi', 'john', 'spencer', 'michael'] // michael
+var wordArrayTwo = ['a','bb','ccc','dd'] //ccc
 
 /**
  * Finds the longest word in the given array of words.
@@ -59,4 +59,5 @@ function findLongestWord(arr) {
 }
 
 console.log(findLongestWord(wordArray))
+console.log(findLongestWord(wordArrayTwo))
 
