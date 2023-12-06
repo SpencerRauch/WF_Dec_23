@@ -29,6 +29,12 @@ const expectedD = -1;
  */
 function indexOf(items, searchItem) {
     // code here
+    for (var i = 0; i < items.length; i++){
+        if (items[i] === searchItem){
+            return i
+        }
+    }
+    return -1
 }
 
 // Tests
@@ -85,6 +91,7 @@ const expected5 = null;
 */
 function nthLast(items, nthToLast) {
     // code here
+
 }
 
 // Tests
