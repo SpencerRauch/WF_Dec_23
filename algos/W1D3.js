@@ -29,16 +29,16 @@ const expectedD = -1;
  */
 function indexOf(items, searchItem) {
     // code here
-    for (var i = 0; i < items.length; i++){
-        if (items[i] === searchItem){
-            return i
+    for (var i = 0; i < items.length; i++) {
+        if (items[i] === searchItem) {
+            return i;
         }
     }
-    return -1
+    return -1;
 }
 
 // Tests
-console.log("\n************Algo #1***********")
+console.log("\n************Algo #1***********");
 const resultA = indexOf(arrA, searchItemA);
 console.log(resultA, "should be", expectedA);
 
@@ -89,13 +89,18 @@ const expected5 = null;
  * @param {number} nthToLast
  * @returns {any} The item at the nthToLast index or null.
 */
-function nthLast(items, nthToLast) {
-    // code here
+function nthLast(items = [], nthToLast = 1) {
+    let idx = items.length - nthToLast;
 
+    if (idx >= 0 && idx < items.length) {
+        return items[idx];
+    }
+    return null;
 }
 
+
 // Tests
-console.log("\n************Algo #2***********")
+console.log("\n************Algo #2***********");
 const result1 = nthLast(arr1, idx1);
 console.log(result1, "should be", expected1);
 
