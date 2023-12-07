@@ -24,9 +24,9 @@ function countEvenNegatives(nums) {
 console.log("\n************Algo #1***********");
 const result1 = countEvenNegatives(nums1);
 console.log(result1, "should be", expected1);
-const result2 = countEvenNegatives(nums1);
+const result2 = countEvenNegatives(nums2);
 console.log(result2, "should be", expected2);
-const result3 = countEvenNegatives(nums1);
+const result3 = countEvenNegatives(nums3);
 console.log(result3, "should be", expected3);
 
 /*****************************************************************/
