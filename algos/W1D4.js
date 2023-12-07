@@ -5,6 +5,9 @@ return a count of how many are both even and negative.
 
 const nums1 = [1, 5, -1, 2, -4, 9, -10, 0, -3, -2];
 const expected1 = 3;
+// var x = expected1
+// x++
+// console.log(x, expected1)
 
 const nums2 = [];
 const expected2 = 0;
@@ -19,6 +22,13 @@ const expected3 = 3;
  */
 function countEvenNegatives(nums) {
     //your code here
+    var count = 0;
+    for (var i = 0; i < nums.length; i++){
+        if (nums[i] < 0 && nums[i] % 2 == 0){
+            count++
+        }
+    }
+    return count;
 }
 // Tests
 console.log("\n************Algo #1***********");
@@ -58,6 +68,14 @@ const expectedB = [1, 2, 3, "a", "b"];
  */
 function concat(items1, items2) {
     // code here
+    var newArr = [];
+    for (var i = 0; i < items1.length; i++){
+        newArr.push(items1[i])
+    }
+    for (var j = 0; j < items2.length; j++){
+        newArr.push(items2[j])
+    }
+    return newArr
 }
 
 // Tests
@@ -65,12 +83,18 @@ console.log("\n************Algo #2***********");
 console.log("A");
 const resultA = concat(arrA1, arrB1);
 console.log(resultA, "should be", expectedA);
-console.log(arrA1, "should still be", arrA1 )
-console.log(arrB1, "should still be", arrB1 )
+console.log(arrA1, "should still be  [a,b] "  )
+console.log(arrB1, "should still be [1,2,3]" )
 
 
 console.log("\nB");
 const resultB = concat(arrA2, arrB2);
 console.log(resultB, "should be", expectedB);
-console.log(arrA2, "should still be", arrA2 )
-console.log(arrB2, "should still be", arrB2 )
+console.log(arrA2, "should still be [1,2,3]" )
+console.log(arrB2, "should still be  [a,b] ")
+
+
+var test = [1,2,3]
+var x = test
+x.push(4)
+console.log(test,x)
