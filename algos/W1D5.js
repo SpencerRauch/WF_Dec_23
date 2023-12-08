@@ -6,6 +6,7 @@
   the start index (inclusive) to the end index (exclusive)
 
   What should you do if the provided end index is out of bounds?
+  What should you do if the provided start index is out of bounds?
 */
 
 const arr1 = ["a", "b", "c", "d", "e"];
@@ -24,8 +25,8 @@ const endIdx3 = 2;
 const expected3 = ["b"];
 
 const arr4 = ["a", "b", "c", "d", "e"];
-const startIdx4 = -100;
-const endIdx4 = 100;
+const startIdx4 = -100; // this should be cleaned up to be 0
+const endIdx4 = 100; // what should we adjust a overly large end to?
 const expected4 = ["a", "b", "c", "d", "e"];
 
 const arr5 = ["a", "b", "c", "d", "e"];
@@ -37,6 +38,7 @@ const arr6 = ["a", "b", "c", "d", "e"];
 const startIdx6 = 1;
 const endIdx6 = 1;
 const expected6 = [];
+
 
 /**
  * Returns a slice of given arr.
