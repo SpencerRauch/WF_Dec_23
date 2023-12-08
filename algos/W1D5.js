@@ -26,7 +26,7 @@ const expected3 = ["b"];
 
 const arr4 = ["a", "b", "c", "d", "e"];
 const startIdx4 = -100; // this should be cleaned up to be 0
-const endIdx4 = 100; // what should we adjust a overly large end to?
+const endIdx4 = 100; // what should we adjust an overly large end to?
 const expected4 = ["a", "b", "c", "d", "e"];
 
 const arr5 = ["a", "b", "c", "d", "e"];
@@ -43,13 +43,28 @@ const expected6 = [];
 /**
  * Returns a slice of given arr.
  * @param {Array<any>} items
- * @param {number} startIdx
- * @param {number} endIdx
  * @returns {Array<any>} The slice of the given arr from startIdx inclusive
  *    to endIdx.
  */
 function slice(items, startIdx, endIdx) {
     // code here
+    var slicedItems = []
+    var safeStart = startIdx
+    var safeEnd = endIdx
+
+    if (safeStart < 0){
+        safeStart = 0
+    }
+
+    if (safeEnd > items.length){
+        safeEnd = items.length
+    }
+
+    for (var i = safeStart; i < safeEnd; i++){
+        slicedItems.push(items[i])
+    }
+
+    return slicedItems
 }
 
 // Tests
@@ -72,3 +87,57 @@ console.log(result5, "should be", expected5);
 const result6 = slice(arr6, startIdx6, endIdx6);
 console.log(result6, "should be", expected6);
 
+/***************************************************************************************************** */
+/* 
+  Recreate the built in .reverse method
+
+  Given an array, alter the array in place to have all of it's elements reversed
+  https://login.codingdojo.com/m/201/7911/54786 <-- hints on swapping values
+*/
+
+const arrA = ["a", "b", "c", "d", "e"];
+const expectedA = ["e", "d", "c", "b", "a"];
+
+const arrB = ["s", "l", "a", "p"];
+const expectedB = ["p", "a", "l", "s"];
+
+const arrC = ["k", "n", "i", "t", "s"];
+const expectedC = ["s", "t", "i", "n", "k"];
+
+
+
+/**
+ * Reverses a given array in place
+ * @param {Array<any>} items
+ * @param {number} startIdx
+ * @param {number} endIdx
+ * @returns {Array<any>} The original array, altered to be reversed
+ *    
+ */
+function reverse(items) {
+    var middle = Math.floor(items.length/2)
+    for (var leftIndex = 0; leftIndex < middle; leftIndex++){
+        var rightIndex = items.length - 1 - leftIndex;
+        var temp = items[leftIndex]
+        items[leftIndex] = items[rightIndex]
+        items[rightIndex] = temp
+    }
+    return items
+}
+
+// Tests
+console.log("\n************Algo #2***********");
+console.log("A");
+const test1 = reverse(arrA);
+console.log(test1, "should be", expectedA); //tests return value
+console.log(arrA, "should be", expectedA); //tests that original array was altered
+
+console.log("\nB");
+const test2 = reverse(arrB);
+console.log(test2, "should be", expectedB);
+console.log(arrB, "should be", expectedB);
+
+console.log("\nC");
+const test3 = reverse(arrC);
+console.log(test3, "should be", expectedC);
+console.log(arrC, "should be", expectedC);
