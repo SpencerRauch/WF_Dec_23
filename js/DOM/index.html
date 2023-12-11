@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Play with Dom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="myheader">Playing with the dom</h1>
+    <label for="darkmode">Darkmode</label>
+    <input type="checkbox" name="darkmode" id="darkmode" onchange="toggleDarkMode()">
+    <!-- <button id="clickMe" onclick="alert('Banana')">Click me</button> -->
+    <!-- <button id="clickMe" onclick="this.remove()">Remove</button> -->
+    <button id="clickMe" onclick="double(doubleMe)"><span id="doubleMe">1</span> click me to double me</button>
+    <div class="dflex" id="flexboxOne">
+        <div class="flex-item" onclick="double(this)" onmouseover="over(this)" onmouseout="out(this)">1</div>
+        <div class="flex-item" onmouseover="over(this)" onmouseout="out(this)"></div>
+        <div class="flex-item" onmouseover="over(this)" onmouseout="out(this)"></div>
+    </div>
+    <div>
+        <label for="justify"> Justify content:</label>
+        <select name="justifyContent" onchange="justifyFlex(this,flexboxOne)">
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+        </select>
+        <label for="alignItems"> Align items:</label>
+        <select name="alignItems" onchange="alignFlex(this,flexboxOne)">
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+        </select>
+    </div>
+    <div class="dflex" id="flexboxTwo">
+        <div class="flex-item" onclick="double(this)" onmouseover="over(this)" onmouseout="out(this)">1</div>
+        <div class="flex-item" onmouseover="over(this)" onmouseout="out(this)"></div>
+        <div class="flex-item" onmouseover="over(this)" onmouseout="out(this)"></div>
+    </div>
+    <div>
+        <label for="justify"> Justify content:</label>
+        <select name="justifyContent" onchange="justifyFlex(this,flexboxTwo)">
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+        </select>
+        <label for="alignItems"> Align items:</label>
+        <select name="alignItems" "onchange="alignFlex(this,flexboxTwo)">
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+        </select>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
