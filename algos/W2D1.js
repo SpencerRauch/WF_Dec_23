@@ -33,7 +33,11 @@ var lifesAnswers = [
  * @returns {string} the randomly chosen oracle response 
  */
 function consultTheOracle(arr) {
-    // code here
+    // return arr[Math.floor(Math.random()*arr.length)]
+
+    //Math.random() returns a number between 0 (inclusive) and 1 (exclusive)
+    var index = Math.floor(Math.random()*arr.length)
+    return arr[index];
 }
 
 console.log("The oracle says", consultTheOracle(lifesAnswers));
@@ -66,7 +70,15 @@ const expected3 = [];
  */
 function concatArrWithSelf(items) {
     // code here
+    var newArr = []
+    for (var i = 0; i < 2; i++){
+        for (var j = 0; j < items.length; j++){
+            newArr.push(items[j])
+        }
+    }
+    return newArr
 }
+
 console.log("****************Algo Two *****************");
 console.log("A");
 const actual1 = concatArrWithSelf(arr1);
