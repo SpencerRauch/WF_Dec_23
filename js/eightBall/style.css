@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#ball{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+#viewPort{
+    border-radius: 50%;
+    background-color: #1e1d45;
+    height: 180px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#responseField{
+    color:aqua;
+}
+
+#askButton {
+    background-color: red;
+    color: white;
+    padding: 4px;
+    border: none;
+    box-shadow: 6px 6px 6px pink;
+    cursor: pointer;
+}
+
+#askButton:active{
+    box-shadow: 3px 3px 3px pink;
+    transform: translate(2px,2px);
+}
+
+/* #askButton:hover{
+    padding: 8px;
+} */
+
+.elementToShake {
+    animation: shake 3s linear;
+}
+
+@keyframes shake {
+    0% {
+
+    }
+    20% {
+        transform: translateY(30px);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    60%{
+        transform: translateY(30px);
+    }
+    80%{
+        transform: translateY(-30px);
+    }
+    100% {
+
+    }
+}
+
+.elementToFadeIn{
+    animation: fadeIn 2s linear;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: rotate(-45deg) perspective(1200px) translateZ(-1200px);
+    }
+    20%{
+        opacity: .2;
+        transform: rotate(45deg) perspective(1200px) translateZ(-1000px);
+    }
+    50%{
+        opacity: .4;
+        transform: rotate(-45deg) perspective(1200px) translate3D(20px, -20px, -600px);
+    }
+    100%{
+        opacity: 1;
+    }
+}

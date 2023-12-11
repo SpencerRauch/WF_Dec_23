@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8 Ball</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Consult the Oracle</h1>
+    <p>Now answering: <span id="currQuestion"></span></p>
+    <div id="ball">
+        <div id="viewPort">
+            <p id="responseField">placehold text</p>
+        </div>
+    </div>
+    <label for="questionInput">Ask the oracle:</label>
+    <input type="text" name="questionInput" id="questionInput">
+    <button id="askButton" onclick="consultOracle()">Ask</button>
+    <div id="innerTest">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
