@@ -36,7 +36,8 @@ function consultTheOracle(arr) {
     // code here
 }
 
-console.log("The oracle says", consultTheOracle(lifesAnswers), "\n");
+console.log("The oracle says", consultTheOracle(lifesAnswers));
+console.log("(should be one of our answers) \n")
 
 
 /* 
