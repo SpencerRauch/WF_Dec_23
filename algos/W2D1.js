@@ -70,9 +70,14 @@ console.log("****************Algo Two *****************");
 console.log("A");
 const actual1 = concatArrWithSelf(arr1);
 console.log(actual1, "should be", expected1);
-console.log(arr1, "should be [a, b, c]");
+console.log(arr1, "should be ['a', 'b', 'c']");
 
 console.log("B");
 const actual2 = concatArrWithSelf(arr2);
 console.log(actual2, "should be", expected2);
-console.log(arr2, "should be [a]");
+console.log(arr2, "should be ['a']");
+
+console.log("C");
+const actual3 = concatArrWithSelf(arr3);
+console.log(actual3, "should be", expected3);
+console.log(arr3, "should be []");
