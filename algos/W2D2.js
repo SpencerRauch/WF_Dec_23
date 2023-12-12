@@ -30,6 +30,13 @@ var pokemon = [
     { "id": 148, "name": "Dragonair",  "types": ["dragon"] }
 ];
 
+console.log(pokemon[0].types[0])
+// var obj = {
+//     key1: 'val1',
+//     key2: 'val2',
+//     key3: 'val3'
+// }
+
 /**
  * console.log the pokemon objects whose id is evenly divisible by 3 
  * @param {Array<any>} pokemon
