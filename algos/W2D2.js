@@ -31,6 +31,7 @@ var pokemon = [
 ];
 
 console.log(pokemon[0].types[0])
+console.log(pokemon[0].id)
 // var obj = {
 //     key1: 'val1',
 //     key2: 'val2',
@@ -44,6 +45,11 @@ console.log(pokemon[0].types[0])
  */
 function divisibleByThree(pokemon) {
     //your code here
+    for (let i = 0; i < pokemon.length; i++){
+        if (pokemon[i].id % 3 === 0){
+            console.log(pokemon[i])
+        }
+    }
 }
 
 /**
@@ -53,6 +59,11 @@ function divisibleByThree(pokemon) {
  */
 function moreThanOneType(pokemon) {
     //your code here
+    for (let i = 0; i < pokemon.length; i++){
+        if (pokemon[i].types.length > 1){
+            console.log(pokemon[i])
+        }
+    }
 }
 
 /**
@@ -62,6 +73,11 @@ function moreThanOneType(pokemon) {
  */
 function poisonType(pokemon) {
     //your code here
+    for (let i = 0; i < pokemon.length; i++){
+        if (pokemon[i].types.length == 1 && pokemon[i].types[0] == 'poison'){
+            console.log(pokemon[i].name)
+        }
+    }
 }
 
 /**
@@ -71,6 +87,11 @@ function poisonType(pokemon) {
  */
 function flyingSecondType(pokemon) {
     //your code here
+    for (let i = 0; i < pokemon.length; i++){
+        if (pokemon[i].types.length >=2 && pokemon[i].types[1] == 'flying'){
+            console.log(pokemon[i].types[0])
+        }
+    }
 }
 
 /**
@@ -80,6 +101,16 @@ function flyingSecondType(pokemon) {
  */
 function reversedNamesOfPoisonPokemon(pokemon) {
     //your code here
+    for (let i = 0; i < pokemon.length; i++){
+        if (pokemon[i].types.length == 1 && pokemon[i].types[0] == 'poison'){
+            let name = pokemon[i].name
+            let reversed = ""
+            for(let j = 0; j < name.length; j++){
+                reversed = name[j] + reversed
+            }
+            console.log(reversed)
+        }
+    }
 }
 
 console.log(" Pokemon whose id is divisible by 3")
