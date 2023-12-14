@@ -26,4 +26,13 @@ const expected3 = [10, 20];
  */
 function flatten2dArray(twoDimArr) {
     // code here
+    const newArr = []
+    for (let i = 0; i < twoDimArr.length; i++){
+        for (let j = 0; j < twoDimArr[i].length; j++){
+            newArr.push(twoDimArr[i][j])
+        }
+    }
+    return newArr
 }
+
+console.log(flatten2dArray(twoDimArr3))
