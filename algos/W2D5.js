@@ -25,7 +25,23 @@ hint: How many digits are in row n?
 
 
 function generatePascalsTriangle(n) {
-    //Your code here
+    let triangle = []; //create triangle array
+
+    for (let i = 0; i < n; i++) { //for each n
+        let row = []; //create a row array
+
+        for (let j = 0; j <= i; j++) { //this loops fills in the row array
+            if (j === 0 || j === i) { //if we're at the start or end, we push a 1
+                row.push(1);
+            } else { //otherwise, we calculate by adding corresponding two numbers from the previous row
+                row.push(triangle[i - 1][j - 1] + triangle[i - 1][j]);
+            }
+        }
+
+        triangle.push(row); //row is ready to add to the triangle
+    }
+
+    return triangle;
 }
 
 
