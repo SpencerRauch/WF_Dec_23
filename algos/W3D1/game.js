@@ -25,8 +25,28 @@ function render(theDojo) {
 //        under the adjacent (all sides and corners) squares.
 //        Use i and j as the indexes to check theDojo.
 function howMany(i, j, element) {
-  console.log({i, j});
-  alert("TODO - determine how many ninjas are hiding in adjacent squares");
+  console.log({i,j})
+  let total = 0;
+  // i is which array we're in
+  // j is array position
+  if (theDojo[i][j] >= 1) {
+      dojoDiv.innerHTML = `<h2>Game Over!</h2> \n <button onclick="restartGame()">Restart</button>`
+  }
+  
+  for (let row = i - 1; row <= i + 1 && row < theDojo.length; row++) {
+      if (row >= 0) { // make sure row does not leave the grid
+          for (var col = j - 1; col <= j + 1 && col < theDojo[0].length; col++) {
+              if (!(row === i && col === j) && col >= 0) { // Ignore the selected square and make sure column does not leave the grid
+                  total += theDojo[row][col]
+              }
+          }
+      }
+  }
+  element.innerText = total;
+}
+
+function restartGame(){
+  dojoDiv.innerHTML = render(theDojo);
 }
     
 // BONUS CHALLENGES
@@ -44,3 +64,4 @@ console.log("%c" + "GOOD LUCK THIS IS A CHALLENGE!", style);
 console.table(theDojo);
 // adds the rows of buttons into <div id="the-dojo"></div> 
 dojoDiv.innerHTML = render(theDojo);  
+
