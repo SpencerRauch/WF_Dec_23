@@ -29,8 +29,18 @@ const arr2Expected = ["a"];
  * @returns {number} The new length of items.
  */
 function unshift(items, newItem) {
-    // code here
+    // duplicate the last item
+    items.push(items[items.length - 1]);
+    //start two from the end, copy the current item into the one behind it
+    for (let i = items.length - 3; i >= 0; i--) {
+        items[i + 1] = items[i];
+    }
+    // place the new item at the front
+    items[0] = newItem;
+    //return length
+    return items.length;
 }
+// arr1.unshift()
 
 console.log("****Test 1****");
 console.log(unshift(arr1, newItem1), "expected:", expected1);
