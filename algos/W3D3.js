@@ -4,7 +4,7 @@
   the array by making space for it at the beginning of the array.
   return the new length of the array.
   
-  Do this without using any built-in array methods.
+  Do this without using any built-in array methods. (push is okay)
 */
 
 const arr1 = [1, 2, 3];
