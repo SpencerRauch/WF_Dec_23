@@ -47,6 +47,61 @@ m == nums2.length
  * @param {number[]} nums2
  * @return {number[]}
  */
-function findIntersectionValues(nums1, nums2) {
-    //Your code here
+function findIntersectionValuesHashMap(nums1, nums2) { //O(2n + 2m)
+    let obj1 = {} // create maps for each array
+    let obj2 = {}
+    let result = [0,0]
+    //populating hash maps
+    for (let i = 0; i < nums1.length; i++){ 
+        obj1[nums1[i]] = true;
+    }
+    for (let i = 0; i < nums2.length; i++){
+        obj2[nums2[i]] = true;
+    }
+    //iterating through arrays, using hash maps for o(1) look up 
+    for (let i = 0; i < nums1.length; i++){ 
+        if (obj2.hasOwnProperty(nums1[i])){ // a little more proper js
+            result[0]++
+        } 
+    }
+    for (let i = 0; i < nums2.length; i++){ 
+        if (obj1[nums2[i]]){ // will be undefined or true -- undefined is considered "falsey"
+            result[1]++
+        } 
+    }
+    return result
 };
+
+function findIntersectionValuesIncludes(nums1, nums2) { //O(n*m + n*m)
+    let result = [0,0]
+    for (let i = 0; i < nums1.length; i++){
+        if (nums2.includes(nums1[i])) result[0]++
+    }
+    for (let i = 0; i < nums2.length; i++){
+        if (nums1.includes(nums2[i])) result[1]++
+    }
+    return result
+};
+
+
+function findIntersectionValuesVanilla(nums1, nums2) { //O(n*m + n*m)
+    let result = [0,0]
+    for (let i = 0; i < nums1.length; i++){
+        for (let j=0; j < nums2.length; j++){
+            if(nums2[j] === nums1[i]){
+                result[0]++
+                break
+            }
+        }
+    }
+    for (let i = 0; i < nums2.length; i++){
+        for (let j=0; j < nums1.length; j++){
+            if(nums1[j] === nums2[i]){
+                result[1]++
+                break
+            }
+        }
+    }
+    return result
+};
+
